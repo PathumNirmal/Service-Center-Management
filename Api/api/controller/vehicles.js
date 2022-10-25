@@ -14,10 +14,10 @@ exports.vehicles_get_all = (req, res, next) => {
                         model: doc.model,
                         manufacture_year: doc.manufacture_year,
                         _id: doc._id,
-                        // request: {
-                        //     type: "GET",
-                        //     url: "http://localhost:3000/products/" + doc._id
-                        // }
+                        request: {
+                            type: "GET",
+                            url: "http://localhost:3000/vehicles/" + doc._id
+                        }
                     }
                 })
             }
@@ -35,17 +35,9 @@ exports.vehicles_get_all = (req, res, next) => {
                 error: err
             });
         })
-    // res.status(200).json({
-    //     message: 'Handling GET requests to /products'
-    // });
 }
 
 exports.vehicles_create_vehicle = (req, res, next) => {
-    // const product = {
-    //     name: req.body.name,
-    //     price: req.body.price
-    // }
-    // console.log(req.file);
     const vehicle = new Vehicle({
         _id: new mongoose.Types.ObjectId(),
         brand: req.body.brand,
@@ -63,10 +55,10 @@ exports.vehicles_create_vehicle = (req, res, next) => {
                     model: result.model,
                     manufacture_year: result.manufacture_year,
                     _id: result._id,
-                    // request: {
-                    //     type: 'GET',
-                    //     url: "http://localhost:3000/products/" + result._id
-                    // }
+                    request: {
+                        type: 'GET',
+                        url: "http://localhost:3000/vehicles/" + result._id
+                    }
                 }
             });
         })
@@ -79,58 +71,48 @@ exports.vehicles_create_vehicle = (req, res, next) => {
     
 }
 
-// exports.products_get_product = (req, res, next) => {
-//     const id = req.params.productId;
+exports.vehicles_get_vehicle = (req, res, next) => {
+    const id = req.params.vehicleId;
     
-//     Product.findById(id)
-//         .select('name price _id productImage')
-//         .exec()
-//         .then(doc => {
-//             console.log("From database", doc);
-//             if(doc) {
-//                 res.status(200).json({
-//                     product: doc,
-//                     request: {
-//                         type: 'GET',
-//                         description: 'Get all products',
-//                         usr: 'http://localhost:3000/products'
-//                     }
-//                 });
-//             } else {
-//                 res.status(404).json({message: 'No valid entry found for procided ID'});
-//             }
+    Vehicle.findById(id)
+        .select('brand model manufacture_year _id')
+        .exec()
+        .then(doc => {
+            console.log("From database", doc);
+            if(doc) {
+                res.status(200).json({
+                    product: doc,
+                    request: {
+                        type: 'GET',
+                        description: 'Get all vehicles',
+                        usr: 'http://localhost:3000/vehicles'
+                    }
+                });
+            } else {
+                res.status(404).json({message: 'No valid entry found for procided ID'});
+            }
             
-//         })
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json({error: err});
-//         })
-//     // if(id === 'special') {
-//     //     res.status(200).json({
-//     //         message: 'You discovered the special ID',
-//     //         id: id
-//     //     });
-//     // } else {
-//     //     res.status(200).json({
-//     //         message: 'You passed an ID'
-//     //     });
-//     // }
-// }
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({error: err});
+        })
+}
 
-// exports.products_update_product = (req, res, next) => {
-//     const id = req.params.productId;
+// exports.vehicles_update_vehicle = (req, res, next) => {
+//     const id = req.params.vehicleId;
 //     const updateOps = {};
 //     for( const ops of req.body) {
 //         updateOps[ops.propName] = ops.value;
 //     }
-//     Product.update({ _id: id }, { $set: updateOps })
+//     Vehicle.update({ _id: id }, { $set: updateOps })
 //         .exec()
 //         .then(result => {
 //             res.status(200).json({
-//                 message: 'Product updated',
+//                 message: 'Vehicle updated',
 //                 request: {
 //                     type: 'GET',
-//                     url: 'http://localhost:3000/products/' + id
+//                     url: 'http://localhost:3000/vehicles/' + id
 //                 }
 //             });
 //         })
@@ -140,29 +122,26 @@ exports.vehicles_create_vehicle = (req, res, next) => {
 //                 error: err
 //             });
 //         });
-//     // res.status(200).json({
-//     //     message: 'Updated product!'
-//     // });
 // }
 
-// exports.products_delete_product = (req, res, next) => {
-//     const id = req.params.productId;
-//     Product.remove({ _id: id})
-//         .exec()
-//         .then(result => {
-//             res.status(200).json({
-//                 message: 'Product deleted',
-//                 request: {
-//                     type: 'POST',
-//                     url: 'http://localhost:3000/products',
-//                     body: { name: 'String', price: 'Number'}
-//                 }
-//             });
-//         })
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json({
-//                 error: err
-//             });
-//         });
-// }
+exports.vehicles_delete_vehicle = (req, res, next) => {
+    const id = req.params.vehicleId;
+    Vehicle.remove({ _id: id})
+        .exec()
+        .then(result => {
+            res.status(200).json({
+                message: 'Vehicle deleted',
+                // request: {
+                //     type: 'POST',
+                //     url: 'http://localhost:3000/vehicles',
+                //     body: { name: 'String', price: 'Number'}
+                // }
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+}

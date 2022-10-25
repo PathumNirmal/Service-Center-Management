@@ -36,10 +36,14 @@ router.post('/', VehiclesController.vehicles_create_vehicle);
 
 // router.post('/', checkAuth, upload.single('productImage'), ProductsController.products_create_product);
 
-// router.get('/:productId', ProductsController.products_get_product);
+router.get('/:vehicleId', VehiclesController.vehicles_get_vehicle);
 
-// router.patch('/:productId', checkAuth, ProductsController.products_update_product);
+// router.patch('/:vehicleId', checkAuth, VehiclesController.vehicles_update_vehicle);
 
-// router.delete('/:productId', checkAuth, ProductsController.products_delete_product);
+// router.delete('/:vehicleId', checkAuth, VehiclesController.vehicles_delete_vehicle);
+
+// router.patch('/:vehicleId', VehiclesController.vehicles_update_vehicle);
+
+router.delete('/:vehicleId', VehiclesController.vehicles_delete_vehicle);
 
 module.exports = router;
