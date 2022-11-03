@@ -13,9 +13,9 @@ const customerSchema = mongoose.Schema({
     },
     password: { type: String, required: true},
     role: { type: String, required: true },
-    vehicle_id: [
-        {type: Schema.Types.ObjectId, ref: 'Customer_Vehicle_Detail'}
-    ]
+    // vehicle_id: [
+    //     {type: Schema.Types.ObjectId, ref: 'Customer_Vehicle_Detail'}
+    // ]
 });
 
 module.exports = mongoose.model('Customer', customerSchema);

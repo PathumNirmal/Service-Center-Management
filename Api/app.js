@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 // const orderRoutes = require('./api/routes/orders');
 const vehicleRoutes = require('./api/routes/vehicles');
 const userRoutes = require('./api/routes/user');
+const customerRoutes = require('./api/routes/customer');
 
 mongoose.connect('mongodb://localhost:27017/ServiceCenter', { useNewUrlParser: true }).then(() => {
     console.log("Connected to MongoDB successfully :)");
@@ -36,10 +37,9 @@ app.use((req, res, next) =>{
     next();
 })
 
-// app.use('/products', productRoutes);
-// app.use('/orders', orderRoutes);
 app.use('/vehicles', vehicleRoutes);
 app.use('/user', userRoutes);
+app.use('/customer', customerRoutes);
 
 // app.use((req, res, next) => {
 //     res.status(200).json({
