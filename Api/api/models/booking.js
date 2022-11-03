@@ -6,11 +6,11 @@ const bookingSchema = mongoose.Schema({
     time: { type: String, require: true },
     status: { type: String, require: true },
     owner: [
-        {type: Schema.Types.ObjectId, ref: 'User'}
+        {type: Schema.Types.ObjectId, ref: 'Customer'}
     ],
-    // vehicle: [
-    //     {type: Schema.Types.ObjectId, ref: 'Vehicle'}
-    // ]
+    vehicle: [
+        {type: Schema.Types.ObjectId, ref: 'Customer_Vehicle_Detail'}
+    ]
 });
 
 module.exports = mongoose.model('Booking', bookingSchema);

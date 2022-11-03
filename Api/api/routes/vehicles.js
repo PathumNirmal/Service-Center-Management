@@ -42,7 +42,7 @@ router.get('/:vehicleId', VehiclesController.vehicles_get_vehicle);
 
 // router.delete('/:vehicleId', checkAuth, VehiclesController.vehicles_delete_vehicle);
 
-// router.patch('/:vehicleId', VehiclesController.vehicles_update_vehicle);
+router.patch('/:vehicleId', VehiclesController.vehicles_update_vehicle);
 
 router.delete('/:vehicleId', VehiclesController.vehicles_delete_vehicle);
 
