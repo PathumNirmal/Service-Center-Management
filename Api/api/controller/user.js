@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require("../models/user");
 
-exports.user_signup = (req, res, next) => {
+exports.user_add = (req, res, next) => {
     User.find({ email: req.body.email })
         .exec()
         .then(user => {
@@ -22,6 +22,7 @@ exports.user_signup = (req, res, next) => {
                         const user = new User({
                             _id: new mongoose.Types.ObjectId(),
                             name: req.body.name,
+                            nic: req.body.nic,
                             phone: req.body.phone,
                             address: req.body.address,
                             email: req.body.email,
@@ -107,4 +108,92 @@ exports.user_delete = (req, res, next) => {
                 error: err
             });
         })
+}
+
+exports.user_get_all = (req, res, next) => {
+    User.find()
+        // .select('brand model manufacture_year _id')
+        .exec()
+        .then(docs => {
+            const response = {
+                count: docs.length,
+                users: docs.map(doc => {
+                    return {
+                        name: doc.name,
+                        nic: doc.nic,
+                        phone: doc.manufacture_year,
+                        address: doc.address,
+                        email: doc.email,
+                        vehicle_id: doc.vehicle_id,
+                        _id: doc._id,
+                        request: {
+                            type: "GET",
+                            url: "http://localhost:3000/user/" + doc._id
+                        }
+                    }
+                })
+            }
+            if(docs.length >= 0) {
+                res.status(200).json(response);
+            } else {
+                res.status(404).json({
+                    message: 'No entries found'
+                });
+            }
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        })
+}
+
+exports.users_get_user = (req, res, next) => {
+    const id = req.params.userId;
+    
+    User.findById(id)
+        // .select('brand model manufacture_year _id')
+        .exec()
+        .then(doc => {
+            console.log("From database", doc);
+            if(doc) {
+                res.status(200).json({
+                    user: doc,
+                    request: {
+                        type: 'GET',
+                        description: 'Get all users',
+                        usr: 'http://localhost:3000/user'
+                    }
+                });
+            } else {
+                res.status(404).json({message: 'No valid entry found for procided ID'});
+            }
+            
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({error: err});
+        })
+}
+
+exports.users_update_user = (req, res, next) => {
+    const id = req.params.userId;
+    User.findOneAndUpdate({ _id: id}, {
+        $set: req.body
+    }).then(result => {
+                res.status(200).json({
+                    message: 'User updated',
+                    request: {
+                        type: 'GET',
+                        url: 'http://localhost:3000/user/' + id
+                    }
+                });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
 }

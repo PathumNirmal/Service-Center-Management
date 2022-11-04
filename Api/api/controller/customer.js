@@ -128,7 +128,7 @@ exports.user_get_all = (req, res, next) => {
                         _id: doc._id,
                         request: {
                             type: "GET",
-                            url: "http://localhost:3000/customers/" + doc._id
+                            url: "http://localhost:3000/customer/" + doc._id
                         }
                     }
                 })
