@@ -7,7 +7,7 @@ const customerVehicleDetailSchema = mongoose.Schema({
     model:{type: String, required: true},
     milage:{type: String, required: true},
     manufacture_year:{type: String, required: true},
-    customer_id:{type: Schema.Types.ObjectId, ref: 'Customer'},
+    customer_id:{type: String, ref: 'Customer'},
 });
 
 module.exports = mongoose.model('Customer_Vehicle_Detail', customerVehicleDetailSchema);
