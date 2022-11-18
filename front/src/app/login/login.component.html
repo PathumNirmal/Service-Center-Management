@@ -1,0 +1,37 @@
+<div style="margin-top: 10%;" class="container" [class.right-panel-active]="status" id="container">
+    <div class="form-container sign-up-container">
+        <form action="#">
+            <h1>Create Account</h1>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Phone Number" />
+            <input type="text" placeholder="Address" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Login</h1>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Login</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account, please log in</p>
+                <button class="ghost" id="signIn" (click)="loginpage()">Login</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Welcome to AutoMiraj!</h1>
+                <p>If you're a new, please Sign Up</p>
+                <button class="ghost" id="signUp" (click)="regpage()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
