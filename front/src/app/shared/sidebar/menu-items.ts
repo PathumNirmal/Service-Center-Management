@@ -3,7 +3,7 @@ import { RouteInfo } from './sidebar.metadata';
 export const ROUTES: RouteInfo[] = [
  
   {
-    path: '/dashboard',
+    path: '/admin/dashboard',
     title: 'Dashboard',
     icon: 'bi bi-speedometer2',
     class: '',
@@ -11,7 +11,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/employee',
+    path: '/admin/component/employee',
     title: 'Employees',
     icon: 'bi bi-people',
     class: '',
@@ -19,7 +19,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/customer',
+    path: '/admin/component/customer',
     title: 'Customers',
     icon: 'bi bi-person-circle',
     class: '',
@@ -27,7 +27,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/vehicle',
+    path: '/admin/component/vehicle',
     title: 'Vehicle & Parts',
     icon: 'bi bi-tools',
     class: '',
@@ -35,7 +35,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/customer_vehicles',
+    path: '/admin/component/customer_vehicles',
     title: "Customer's Vehicle Details",
     icon: 'bi bi-car-front',
     class: '',
@@ -43,7 +43,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/booking',
+    path: '/admin/component/booking',
     title: 'Booking',
     icon: 'bi bi-card-text',
     class: '',
@@ -51,7 +51,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/store',
+    path: '/admin/component/store',
     title: 'Store',
     icon: 'bi bi-shop-window',
     class: '',

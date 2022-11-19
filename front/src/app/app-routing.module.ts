@@ -11,7 +11,7 @@ export const Approutes: Routes = [
   { path: 'home', component: WebsiteComponent},
   { path: 'login', component: LoginComponent},
   {
-    path: '',
+    path: 'admin',
     component: FullComponent,
     children: [
       {

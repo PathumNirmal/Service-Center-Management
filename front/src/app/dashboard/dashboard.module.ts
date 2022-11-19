@@ -16,7 +16,7 @@ const routes: Routes = [
     path: "",
     data: {
       title: "Dashboard",
-      urls: [{ title: "Dashboard", url: "/dashboard" }, { title: "Dashboard" }],
+      urls: [{ title: "Dashboard", url: "admin/dashboard" }, { title: "Dashboard" }],
     },
     component: DashboardComponent,
   },
