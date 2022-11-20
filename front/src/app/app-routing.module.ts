@@ -5,6 +5,7 @@ import { FullComponent } from './layouts/full/full.component';
 import { LoginComponent } from './login/login.component';
 import { WebsiteComponent } from './website/website.component';
 import { Full1Component } from './emp/layouts/full1/full1.component';
+import { Full2Component } from './user/layouts/full2/full2.component';
 
 
 export const Approutes: Routes = [
@@ -47,6 +48,25 @@ export const Approutes: Routes = [
       {
         path: 'component',
         loadChildren: () => import('./emp/component/component.module').then(m => m.ComponentsModule)
+      }
+    ]
+  },
+  {
+    path: 'u',
+    component: Full2Component,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      {
+        path: 'dashboard',
+        loadChildren: () => import('./user/dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'about',
+        loadChildren: () => import('./user/about/about.module').then(m => m.AboutModule)
+      },
+      {
+        path: 'component',
+        loadChildren: () => import('./user/component/component.module').then(m => m.ComponentsModule)
       }
     ]
   },

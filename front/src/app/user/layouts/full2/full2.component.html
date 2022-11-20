@@ -48,7 +48,7 @@
           <!-- Logo text -->
           <span class="logo-text">
             <!-- Light Logo text -->
-            <h1 style="padding-top: 12px; padding-left:20px">SCMS</h1><!-- <img
+            <h4 style="margin-top:10px; margin-left: 30px;">Welcome <br>back</h4><!-- <img
               src="assets/images/logos/logo-text.png"
               class="dark-logo"
               alt="homepage"
@@ -84,10 +84,10 @@
         data-navbarbg="skin5"
         [ngbCollapse]="!isCollapsed"
       >
-        <app-navigation1
+        <app-navigation2
           (toggleSidebar)="toggleSidebarType()"
           class="w-100"
-        ></app-navigation1>
+        ></app-navigation2>
       </div>
     </nav>
   </header>
@@ -100,7 +100,7 @@
     (mouseover)="Logo()"
     (mouseout)="Logo()"
   >
-      <app-sidebar1></app-sidebar1>
+      <app-sidebar2></app-sidebar2>
   </aside>
   <!-- ============================================================== -->
   <!-- End Left Sidebar - style you can find in sidebar.scss  -->

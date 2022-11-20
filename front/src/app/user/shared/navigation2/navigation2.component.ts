@@ -5,10 +5,10 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 declare var $: any;
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html'
+  selector: 'app-navigation2',
+  templateUrl: './navigation2.component.html',
 })
-export class NavigationComponent implements AfterViewInit {
+export class Navigation2Component implements AfterViewInit {
   @Output() toggleSidebar = new EventEmitter<void>();
 
   public config: PerfectScrollbarConfigInterface = {};
@@ -113,3 +113,4 @@ export class NavigationComponent implements AfterViewInit {
 
   ngAfterViewInit() { }
 }
+

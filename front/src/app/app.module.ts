@@ -28,6 +28,10 @@ import { WebsiteComponent } from './website/website.component';
 import { LoginComponent } from './login/login.component';
 import { Full1Component } from './emp/layouts/full1/full1.component';
 import { Sidebar1Component } from './emp/shared/sidebar1/sidebar1.component';
+import { Navigation1Component } from './emp/shared/navigation1/navigation1.component';
+import { Full2Component } from './user/layouts/full2/full2.component';
+import { Sidebar2Component } from './user/shared/sidebar2/sidebar2.component';
+import { Navigation2Component } from './user/shared/navigation2/navigation2.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -47,6 +51,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LoginComponent,
     Full1Component,
     Sidebar1Component,
+    Navigation1Component,
+    Full2Component,
+    Sidebar2Component,
+    Navigation2Component,
   ],
   imports: [
     CommonModule,
