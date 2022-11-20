@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Booking details</h4>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle text-nowrap table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-dark font-medium fs-4">#</th>
+                            <th class="text-dark font-medium fs-4">Date</th>
+                            <th class="text-dark font-medium fs-4">Time</th>
+                            <th class="text-dark font-medium fs-4">Vehicle number</th>
+                            <th class="text-dark font-medium fs-4">Customer</th>
+                            <th class="text-dark font-medium fs-4">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let tr of trow; index as i'>
+                            <td>
+                                {{ i + 1 }}
+                            </td>
+                            <td>
+                                {{tr.date}}
+                            </td>
+                            <td>
+                                {{tr.time}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-info">
+                                    {{tr.v_no}}
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-info">
+                                    {{tr.customer}}
+                                </button>
+                            </td>
+                            <td>
+                                {{tr.status}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">In Service</h4>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle text-nowrap table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-dark font-medium fs-4">#</th>
+                            <th class="text-dark font-medium fs-4">Vehicle number</th>
+                            <th class="text-dark font-medium fs-4">Milage</th>
+                            <th class="text-dark font-medium fs-4">Owner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let tr of trow; index as i'>
+                            <td>
+                                {{ i + 1 }}
+                            </td>
+                            <td>
+                                {{tr.num}}
+                            </td>
+                            <td>
+                                {{tr.milage}}
+                            </td>
+                            <td>
+                                {{tr.owner}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-info">
+                                    Service details
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

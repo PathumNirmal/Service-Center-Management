@@ -26,6 +26,8 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { WebsiteComponent } from './website/website.component';
 import { LoginComponent } from './login/login.component';
+import { Full1Component } from './emp/layouts/full1/full1.component';
+import { Sidebar1Component } from './emp/shared/sidebar1/sidebar1.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -43,6 +45,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SidebarComponent,
     WebsiteComponent,
     LoginComponent,
+    Full1Component,
+    Sidebar1Component,
   ],
   imports: [
     CommonModule,
