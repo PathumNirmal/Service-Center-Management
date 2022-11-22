@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FullComponent } from './layouts/full/full.component';
 import { LoginComponent } from './login/login.component';
+import { AboutComponent } from './about/about.component';
 import { WebsiteComponent } from './website/website.component';
 import { Full1Component } from './emp/layouts/full1/full1.component';
 import { Full2Component } from './user/layouts/full2/full2.component';
+import { ServiceComponent } from './service/service.component';
 
 
 export const Approutes: Routes = [
@@ -13,6 +15,8 @@ export const Approutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: WebsiteComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'service', component: ServiceComponent},
   {
     path: 'admin',
     component: FullComponent,
