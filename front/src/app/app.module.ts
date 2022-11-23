@@ -32,6 +32,7 @@ import { Navigation1Component } from './emp/shared/navigation1/navigation1.compo
 import { Full2Component } from './user/layouts/full2/full2.component';
 import { Sidebar2Component } from './user/shared/sidebar2/sidebar2.component';
 import { Navigation2Component } from './user/shared/navigation2/navigation2.component';
+import { ServiceComponent } from './service/service.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -55,6 +56,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     Full2Component,
     Sidebar2Component,
     Navigation2Component,
+    ServiceComponent,
   ],
   imports: [
     CommonModule,
