@@ -13,7 +13,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FullComponent } from './layouts/full/full.component';
 
-
 import { NavigationComponent } from './shared/header/navigation.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
@@ -32,6 +31,7 @@ import { Navigation1Component } from './emp/shared/navigation1/navigation1.compo
 import { Full2Component } from './user/layouts/full2/full2.component';
 import { Sidebar2Component } from './user/shared/sidebar2/sidebar2.component';
 import { Navigation2Component } from './user/shared/navigation2/navigation2.component';
+import { EmployeeAddComponent } from './emp/employee-add/employee-add.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -55,6 +55,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     Full2Component,
     Sidebar2Component,
     Navigation2Component,
+    EmployeeAddComponent,
   ],
   imports: [
     CommonModule,

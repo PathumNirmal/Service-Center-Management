@@ -1,3 +1,27 @@
+<div *ngIf="displayName">
+    <div class="card">
+        <div class="card-body border-top">
+            <ngb-alert
+            class="
+              bg-transparent
+              border-danger border
+              text-danger
+              d-flex
+              align-items-center
+              fs-5
+            "
+          >
+            <i
+              name="Info"
+              class="feather-sm flex-shrink-0 d-flex me-2"
+            ></i>
+            {{errMessage}}
+            <!-- Email or Password Incorrect -->
+          </ngb-alert>
+        </div>
+    </div>
+</div>
+
 <div style="margin-top: 10%;" class="container" [class.right-panel-active]="status" id="container">
     <div class="form-container sign-up-container">
         <form action="#">
@@ -13,10 +37,10 @@
     <div class="form-container sign-in-container">
         <form action="#">
             <h1>Login</h1>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="email" placeholder="Email" [(ngModel)]="loginUserData.email" name="email" required />
+            <input type="password" placeholder="Password" [(ngModel)]="loginUserData.password" name="password" required />
             <a href="#">Forgot your password?</a>
-            <button>Login</button>
+            <button (click)="loginUser()" type="button">Login</button>
         </form>
     </div>
     <div class="overlay-container">
