@@ -10,9 +10,14 @@ import { UserService } from '../services/user.service';
 export class LoginComponent implements OnInit {
 
   loginUserData = { email: '', password: ''}
+  registerUserData = { nic:'', name:'', phone:'', address:'', email:'', password:'', role:'user'}
 
-  displayName = false;
-  errMessage = "";
+  // isError = false;
+  // isAlert = false;
+  // message = "";
+
+  isAlert = false;
+  alert = {type: '', message: ''};
 
   constructor(private _auth: UserService, private _router: Router) { }
 
@@ -46,10 +51,31 @@ export class LoginComponent implements OnInit {
           }
         },
         error: (err) => {
-          this.displayName = true,
-          this.errMessage = err.error.message
+          this.isAlert = true
+          this.alert.message = err.error.message,
+          this.alert.type = "danger"
         },
         complete: () => console.info('complete')
       })
     }
+
+  registerUser(){
+    this._auth.registerUser(this.registerUserData)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.isAlert = true
+          this.alert.message = "Registration successful. Please Login",
+          this.alert.type = "success"
+      },
+      error: (err) => {
+        this.isAlert = true
+        this.alert.message = err.error.message,
+        this.alert.type = "danger"
+      },
+      complete: () => {
+        console.info('complete')
+      }
+    })
+  }
 }

@@ -16,7 +16,7 @@ export class UserService {
   constructor( private webReqService: WebRequestService, private _router: Router ) { }
 
   registerUser(user: any) {
-    return this.webReqService.post(`user/add`, user);
+    return this.webReqService.post(`customer/signup`, user);
   }
 
   loginUser(user: any) {

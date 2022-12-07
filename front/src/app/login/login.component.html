@@ -1,46 +1,35 @@
-<div *ngIf="displayName">
-    <div class="card">
+<div *ngIf="isAlert">
+    <div class="card w-100">
         <div class="card-body border-top">
-            <ngb-alert
-            class="
-              bg-transparent
-              border-danger border
-              text-danger
-              d-flex
-              align-items-center
-              fs-5
-            "
-          >
-            <i
-              name="Info"
-              class="feather-sm flex-shrink-0 d-flex me-2"
-            ></i>
-            {{errMessage}}
-            <!-- Email or Password Incorrect -->
-          </ngb-alert>
+          <p>
+            <ngb-alert [type]="alert.type" [dismissible]="false" class="customize-alert fs-5">
+              {{ alert.message }}
+            </ngb-alert>
+          </p>
         </div>
     </div>
 </div>
 
 <div style="margin-top: 10%;" class="container" [class.right-panel-active]="status" id="container">
     <div class="form-container sign-up-container">
-        <form action="#">
-            <h1>Create Account</h1>
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Phone Number" />
-            <input type="text" placeholder="Address" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+        <form #myForm="ngForm" (ngSubmit)="registerUser(); myForm.resetForm()" action="#">
+            <h3><strong>Create Account</strong></h3>
+            <input type="text" placeholder="Name" [(ngModel)]="registerUserData.name" name="name" required />
+            <input type="text" placeholder="NIC" [(ngModel)]="registerUserData.nic" name="nic" required />
+            <input type="text" placeholder="Phone Number" [(ngModel)]="registerUserData.phone" name="phone" required />
+            <input type="text" placeholder="Address" [(ngModel)]="registerUserData.address" name="address" required />
+            <input type="email" placeholder="Email" [(ngModel)]="registerUserData.email" name="email" required />
+            <input type="password" placeholder="Password" [(ngModel)]="registerUserData.password" name="password" required />
             <button>Sign Up</button>
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form action="#">
+        <form #myForm1="ngForm" (ngSubmit)="loginUser(); myForm1.resetForm()" action="#">
             <h1>Login</h1>
             <input type="email" placeholder="Email" [(ngModel)]="loginUserData.email" name="email" required />
             <input type="password" placeholder="Password" [(ngModel)]="loginUserData.password" name="password" required />
             <a href="#">Forgot your password?</a>
-            <button (click)="loginUser()" type="button">Login</button>
+            <button>Login</button>
         </form>
     </div>
     <div class="overlay-container">
