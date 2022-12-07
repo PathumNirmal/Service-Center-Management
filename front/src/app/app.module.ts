@@ -32,6 +32,7 @@ import { Full2Component } from './user/layouts/full2/full2.component';
 import { Sidebar2Component } from './user/shared/sidebar2/sidebar2.component';
 import { Navigation2Component } from './user/shared/navigation2/navigation2.component';
 import { EmployeeAddComponent } from './emp/employee-add/employee-add.component';
+import { ServiceComponent } from './service/service.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -56,6 +57,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     Sidebar2Component,
     Navigation2Component,
     EmployeeAddComponent,
+    ServiceComponent,
   ],
   imports: [
     CommonModule,
