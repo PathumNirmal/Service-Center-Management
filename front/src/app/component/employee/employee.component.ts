@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {TableRows, Employee} from './employee-data';
+import { UserService } from '../../services/user.service';
+import { NgToastService } from 'ng-angular-popup';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -7,17 +9,46 @@ import {TableRows, Employee} from './employee-data';
   styleUrls: ['./employee.component.scss']
 })
 export class EmployeeComponent implements OnInit {
-  trow:TableRows[];
+  employees: any;
+  test: any;
 
-  constructor() {
-    this.trow=Employee;
+  constructor(private userService: UserService, private _router: Router, private toast: NgToastService) {
   }
 
   ngOnInit(): void { 
+    this.userService.getEmployees().subscribe((employees: any) => {
+      this.test = employees;
+      this.employees = this.test.users;
+    })
+  }
+
+  deleteEmployee(empId: string){
+    this.userService.deleteEmployee(empId)
+      .subscribe({
+        next: (res: any) => {
+          console.log(res);
+          this.openSuccess("Employee Deleted");
+          window.location.reload();
+      },
+      error: (err: any) => {
+        this.openError(err.error.message)
+      },
+      complete: () => {
+        console.info('complete')
+      }
+    })
+  }
+
+  openSuccess(msg: string){
+    this.toast.success({detail:'Success',summary:msg, position:'tr', duration:5000})
+    // this._router.navigate(['/']);
+  }
+
+  openError(err: string){
+    this.toast.error({detail:'Error',summary:err, position:'tr', duration:5000})
   }
 
 }
-
 
 // import { Component } from '@angular/core';
 // import {Product,TopSelling, TableRows, Employee} from './table-data';

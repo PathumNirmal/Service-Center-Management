@@ -11,7 +11,7 @@ const serviceTypeRoutes = require('./api/routes/service_type');
 const servicePartRoutes = require('./api/routes/service_parts');
 const customerVehicleRoutes = require('./api/routes/customer_vehicle');
 
-mongoose.connect('mongodb://localhost:27017/ServiceCenter', { useNewUrlParser: true }).then(() => {
+mongoose.connect('mongodb://127.0.0.1:27017/ServiceCenter', { useNewUrlParser: true }).then(() => {
     console.log("Connected to MongoDB successfully :)");
 }).catch((e) => {
     console.log("Error while attempting to connect to MongoDB");
