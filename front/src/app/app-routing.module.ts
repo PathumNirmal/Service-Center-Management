@@ -12,6 +12,9 @@ import { ServiceComponent } from './service/service.component';
 import { VehicleAddComponent } from './admin/vehicle-add/vehicle-add.component';
 import { ServiceHistoryComponent } from './user/service-history/service-history.component';
 import { InvoiceListComponent } from './user/invoice-list/invoice-list.component';
+import { ItemAddComponent } from './admin/item-add/item-add.component';
+import { AppointmentComponent } from './user/appointment/appointment.component';
+import { WorkingSheetComponent } from './emp/working-sheet/working-sheet.component';
 
 
 export const Approutes: Routes = [
@@ -42,7 +45,7 @@ export const Approutes: Routes = [
   },
   { path: 'admin/add-emp', component: EmployeeAddComponent},
   { path: 'admin/add-vehicle', component: VehicleAddComponent},
-  // { path: 'admin/add-item', component: VehicleAddComponent},
+  { path: 'admin/add-item', component: ItemAddComponent},
   {
     path: 'emp',
     component: Full1Component,
@@ -62,6 +65,7 @@ export const Approutes: Routes = [
       }
     ]
   },
+  { path: 'emp/servicePlan', component: WorkingSheetComponent},
   {
     path: 'u',
     component: Full2Component,
@@ -83,6 +87,7 @@ export const Approutes: Routes = [
   },
   { path: 'u/service-history', component: ServiceHistoryComponent},
   { path: 'u/allInvoices', component: InvoiceListComponent},
+  { path: 'u/appointment', component: AppointmentComponent},
   {
     path: '**',
     redirectTo: '/starter'

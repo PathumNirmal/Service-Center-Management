@@ -16,24 +16,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor='let tr of trow; index as i'>
+                        <tr *ngFor="let customer of customers; index as i">
                             <td>
                                 {{ i + 1 }}
                             </td>
                             <td>
-                                {{tr.name}}
+                                {{customer.name}}
                             </td>
                             <td>
-                                {{tr.nic}}
+                                {{customer.nic}}
                             </td>
                             <td>
-                                {{tr.phone}}
+                                {{customer.phone}}
                             </td>
                             <td>
-                                {{tr.address}}
+                                {{customer.address}}
                             </td>
                             <td>
-                                {{tr.email}}
+                                {{customer.email}}
                             </td>
                         </tr>
                     </tbody>

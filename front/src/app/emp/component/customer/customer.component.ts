@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {TableRows, Employee} from './customer-data';
+import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-customer',
@@ -7,13 +9,17 @@ import {TableRows, Employee} from './customer-data';
   styleUrls: ['./customer.component.scss']
 })
 export class CustomerComponent implements OnInit {
-  trow:TableRows[];
 
-  constructor() {
-    this.trow=Employee;
-  }
+  customers: any;
+  test: any;
+
+  constructor(private userService: UserService, private _router: Router, private toast: NgToastService) { }
 
   ngOnInit(): void {
+    this.userService.getCustomers().subscribe((customers: any) => {
+      this.test = customers;
+      this.customers = this.test.customers;
+    })
   }
 
 }
