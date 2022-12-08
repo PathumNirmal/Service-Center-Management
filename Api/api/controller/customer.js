@@ -155,7 +155,6 @@ exports.user_delete = (req, res, next) => {
 
 exports.user_get_all = (req, res, next) => {
     Customer.find()
-        // .select('brand model manufacture_year _id')
         .exec()
         .then(docs => {
             const response = {
@@ -164,7 +163,7 @@ exports.user_get_all = (req, res, next) => {
                     return {
                         name: doc.name,
                         nic: doc.nic,
-                        phone: doc.manufacture_year,
+                        phone: doc.phone,
                         address: doc.address,
                         email: doc.email,
                         vehicle_id: doc.vehicle_id,
@@ -196,7 +195,6 @@ exports.users_get_user = (req, res, next) => {
     const id = req.params.custId;
     
     Customer.findById(id)
-        // .select('brand model manufacture_year _id')
         .exec()
         .then(doc => {
             console.log("From database", doc);
@@ -240,24 +238,3 @@ exports.users_update_user = (req, res, next) => {
             });
         });
 }
-    // for( const ops of req.body) {
-    //     updateOps[ops.propName] = ops.value;
-    // }
-    // Vehicle.update({ _id: id }, { $set: updateOps })
-    //     .exec()
-    //     .then(result => {
-    //         res.status(200).json({
-    //             message: 'Vehicle updated',
-    //             request: {
-    //                 type: 'GET',
-    //                 url: 'http://localhost:3000/vehicles/' + id
-    //             }
-    //         });
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //         res.status(500).json({
-    //             error: err
-    //         });
-    //     });
-// }

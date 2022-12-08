@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.openSuccess("Registration successful. Please Login")
+          this.openSuccess("Registration success. Please login")
       },
       error: (err) => {
         this.openError(err.error.message)

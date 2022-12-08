@@ -19,6 +19,10 @@ export class UserService {
     return this.webReqService.post(`customer/signup`, user);
   }
 
+  addEmployee(user: any) {
+    return this.webReqService.post(`user/add`, user);
+  }
+
   loginUser(user: any) {
     return this.webReqService.post(`customer/login`, user).pipe(
       tap((response: any) => {
@@ -49,6 +53,22 @@ export class UserService {
 
   refresh(): void {
     window.location.reload();
+  }
+
+  getEmployees(): any{
+    return this.webReqService.get('user');
+  }
+
+  deleteEmployee(id: string): any{
+    return this.webReqService.delete(`user/${id}`);
+  }
+
+  getCustomers(): any{
+    return this.webReqService.get('customer');
+  }
+
+  deleteCustomer(id: string): any{
+    return this.webReqService.delete(`customer/${id}`);
   }
 }
 

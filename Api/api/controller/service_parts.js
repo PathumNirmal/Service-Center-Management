@@ -47,7 +47,6 @@ exports.add = (req, res, next) => {
 
 exports.get_all = (req, res, next) => {
     ServicePart.find()
-        // .select('name price _id productImage')
         .exec()
         .then(docs => {
             const response = {
@@ -89,7 +88,6 @@ exports.get_one = (req, res, next) => {
     const id = req.params.spId;
     
     ServicePart.findById(id)
-        // .select('name price _id productImage')
         .exec()
         .then(doc => {
             console.log("From database", doc);
@@ -141,11 +139,6 @@ exports.delete = (req, res, next) => {
         .then(result => {
             res.status(200).json({
                 message: 'Record deleted',
-                // request: {
-                //     type: 'POST',
-                //     url: 'http://localhost:3000/service_type',
-                //     body: { name: 'String', price: 'Number'}
-                // }
             });
         })
         .catch(err => {

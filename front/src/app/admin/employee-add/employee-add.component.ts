@@ -18,9 +18,9 @@ export class EmployeeAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registerUser() {
+  addEmployee() {
     //console.log(this.registerUserData)
-    this._user.registerUser(this.registerUserData)
+    this._user.addEmployee(this.registerUserData)
       .subscribe(
         {
           next: (v) => {

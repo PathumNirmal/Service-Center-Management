@@ -150,8 +150,7 @@ exports.user_delete = (req, res, next) => {
 }
 
 exports.user_get_all = (req, res, next) => {
-    User.find()
-        // .select('brand model manufacture_year _id')
+    User.find({ role: 'employee' })
         .exec()
         .then(docs => {
             const response = {
@@ -160,7 +159,7 @@ exports.user_get_all = (req, res, next) => {
                     return {
                         name: doc.name,
                         nic: doc.nic,
-                        phone: doc.manufacture_year,
+                        phone: doc.phone,
                         address: doc.address,
                         email: doc.email,
                         vehicle_id: doc.vehicle_id,
@@ -192,7 +191,6 @@ exports.users_get_user = (req, res, next) => {
     const id = req.params.userId;
     
     User.findById(id)
-        // .select('brand model manufacture_year _id')
         .exec()
         .then(doc => {
             console.log("From database", doc);

@@ -8,7 +8,7 @@ router.post("/signup", CustomerController.user_signup);
 
 router.post("/login", CustomerController.user_login);
 
-router.get("/", checkAuth, CustomerController.user_get_all);
+router.get("/", CustomerController.user_get_all);
 
 router.get("/:custId", CustomerController.users_get_user);
 
