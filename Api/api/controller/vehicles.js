@@ -119,27 +119,6 @@ exports.vehicles_update_vehicle = (req, res, next) => {
             });
         });
 }
-    // for( const ops of req.body) {
-    //     updateOps[ops.propName] = ops.value;
-    // }
-    // Vehicle.update({ _id: id }, { $set: updateOps })
-    //     .exec()
-    //     .then(result => {
-    //         res.status(200).json({
-    //             message: 'Vehicle updated',
-    //             request: {
-    //                 type: 'GET',
-    //                 url: 'http://localhost:3000/vehicles/' + id
-    //             }
-    //         });
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //         res.status(500).json({
-    //             error: err
-    //         });
-    //     });
-// }
 
 exports.vehicles_delete_vehicle = (req, res, next) => {
     const id = req.params.vehicleId;

@@ -10,6 +10,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgToastModule} from 'ng-angular-popup';
 
 import { FullComponent } from './layouts/full/full.component';
 
@@ -31,8 +32,12 @@ import { Navigation1Component } from './emp/shared/navigation1/navigation1.compo
 import { Full2Component } from './user/layouts/full2/full2.component';
 import { Sidebar2Component } from './user/shared/sidebar2/sidebar2.component';
 import { Navigation2Component } from './user/shared/navigation2/navigation2.component';
-import { EmployeeAddComponent } from './emp/employee-add/employee-add.component';
+import { EmployeeAddComponent } from './admin/employee-add/employee-add.component';
 import { ServiceComponent } from './service/service.component';
+import { VehicleAddComponent } from './admin/vehicle-add/vehicle-add.component';
+import { ServiceHistoryComponent } from './user/service-history/service-history.component';
+import { InvoiceListComponent } from './user/invoice-list/invoice-list.component';
+import { AppointmentComponent } from './user/appointment/appointment.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -58,8 +63,13 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     Navigation2Component,
     EmployeeAddComponent,
     ServiceComponent,
+    VehicleAddComponent,
+    ServiceHistoryComponent,
+    InvoiceListComponent,
+    AppointmentComponent,
   ],
   imports: [
+    NgToastModule,
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +11,9 @@ import { UserService } from '../services/user.service';
 export class LoginComponent implements OnInit {
 
   loginUserData = { email: '', password: ''}
+  registerUserData = { nic:'', name:'', phone:'', address:'', email:'', password:'', role:'user'}
 
-  displayName = false;
-  errMessage = "";
-
-  constructor(private _auth: UserService, private _router: Router) { }
+  constructor(private _auth: UserService, private _router: Router, private toast: NgToastService) { }
 
   ngOnInit(): void {
   }
@@ -46,10 +45,34 @@ export class LoginComponent implements OnInit {
           }
         },
         error: (err) => {
-          this.displayName = true,
-          this.errMessage = err.error.message
+          this.openError(err.error.message)
         },
         complete: () => console.info('complete')
       })
     }
+
+  registerUser(){
+    this._auth.registerUser(this.registerUserData)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.openSuccess("Registration success. Please login")
+      },
+      error: (err) => {
+        this.openError(err.error.message)
+      },
+      complete: () => {
+        console.info('complete')
+      }
+    })
+  }
+
+  openSuccess(msg: string){
+    this.toast.success({detail:'Success',summary:msg, position:'tr', duration:5000})
+    // this._router.navigate(['/']);
+  }
+
+  openError(err: string){
+    this.toast.error({detail:'Error',summary:err, position:'tr', duration:5000})
+  }
 }

@@ -7,8 +7,11 @@ import { AboutComponent } from './about/about.component';
 import { WebsiteComponent } from './website/website.component';
 import { Full1Component } from './emp/layouts/full1/full1.component';
 import { Full2Component } from './user/layouts/full2/full2.component';
-import { EmployeeAddComponent } from './emp/employee-add/employee-add.component';
+import { EmployeeAddComponent } from './admin/employee-add/employee-add.component';
 import { ServiceComponent } from './service/service.component';
+import { VehicleAddComponent } from './admin/vehicle-add/vehicle-add.component';
+import { ServiceHistoryComponent } from './user/service-history/service-history.component';
+import { InvoiceListComponent } from './user/invoice-list/invoice-list.component';
 
 
 export const Approutes: Routes = [
@@ -38,6 +41,8 @@ export const Approutes: Routes = [
     ]
   },
   { path: 'admin/add-emp', component: EmployeeAddComponent},
+  { path: 'admin/add-vehicle', component: VehicleAddComponent},
+  // { path: 'admin/add-item', component: VehicleAddComponent},
   {
     path: 'emp',
     component: Full1Component,
@@ -76,6 +81,8 @@ export const Approutes: Routes = [
       }
     ]
   },
+  { path: 'u/service-history', component: ServiceHistoryComponent},
+  { path: 'u/allInvoices', component: InvoiceListComponent},
   {
     path: '**',
     redirectTo: '/starter'

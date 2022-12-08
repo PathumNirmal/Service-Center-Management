@@ -7,6 +7,7 @@ import {topcard,topcards} from './top-cards-data';
 })
 export class TopCardsComponent implements OnInit {
 
+  isNew = true;
   topcards:topcard[];
 
   constructor() { 

@@ -12,7 +12,7 @@ import { NgbdnavBasicComponent } from './nav/nav.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { TableComponent } from "./table/table.component";
-import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeComponent } from './employee/employee.component'; 
 import { CustomerComponent } from './customer/customer.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { BookingComponent } from './booking/booking.component';

@@ -34,30 +34,30 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
-    path: '/u/component/card',
-    title: 'Store',
-    icon: 'bi bi-shop-window',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/u/component/vehicle',
-    title: 'Vehicle & Parts',
-    icon: 'bi bi-tools',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/u/component/customer',
-    title: 'Customers',
-    icon: 'bi bi-person-circle',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+  // {
+  //   path: '/u/component/card',
+  //   title: 'Store',
+  //   icon: 'bi bi-shop-window',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
+  // {
+  //   path: '/u/component/vehicle',
+  //   title: 'Vehicle & Parts',
+  //   icon: 'bi bi-tools',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
+  // {
+  //   path: '/u/component/customer',
+  //   title: 'Customers',
+  //   icon: 'bi bi-person-circle',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
   // {
   //   path: '/component/dropdown',
   //   title: 'Dropdown',

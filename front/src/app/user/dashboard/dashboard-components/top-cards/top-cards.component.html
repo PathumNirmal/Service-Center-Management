@@ -1,6 +1,6 @@
-<h4 class="font-medium my-3">Your Service Details</h4>
 <!-- Row -->
-<div class="row">
+<div *ngIf="!isNew; else elseBlock" class="row">
+  <h4 class="font-medium my-3">Your Service Details</h4>
   <!-- column -->
   <div class="col-lg-4 col-md-6">
     <div class="card text-center">
@@ -43,6 +43,22 @@
     <!-- Card -->
   </div>
 </div>
+<ng-template #elseBlock>
+  <div class="row">
+    <div class="col-lg-4 col-md-6">
+      <!-- Card -->
+      <div class="card text-center">
+        <div class="card-body">
+          <h4 class="card-title">Wellcome to AutoMiraj</h4>
+          <p class="card-text">
+            Make Your First Appointment
+          </p>
+          <a href="javascript:void(0)" class="btn btn-light-info">Get Appointment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
 <!-- Row -->
 
 <!-- Row -->
@@ -53,7 +69,7 @@
         <img src="assets/images/bg/pic5.jpg" alt="blogs" class="card-img-top">
         <div class="card-body">
             <h4 class="card-title">All Service History</h4>
-            <button type="button" class="btn btn-primary">Click here to check</button>
+            <button type="button" routerLink="/u/service-history" class="btn btn-primary">Click here to check</button>
         </div>
     </div>
   </div>
@@ -64,7 +80,7 @@
         <img src="assets/images/bg/pic6.jpg" alt="blogs" class="card-img-top">
         <div class="card-body">
             <h4 class="card-title">All previous invoices</h4>
-            <button type="button" class="btn btn-primary">Click here to check</button>
+            <button type="button" routerLink="/u/allInvoices" class="btn btn-primary">Click here to check</button>
         </div>
     </div>
     <!-- Card -->
