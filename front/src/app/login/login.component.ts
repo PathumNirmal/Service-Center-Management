@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +13,7 @@ export class LoginComponent implements OnInit {
   loginUserData = { email: '', password: ''}
   registerUserData = { nic:'', name:'', phone:'', address:'', email:'', password:'', role:'user'}
 
-  // isError = false;
-  // isAlert = false;
-  // message = "";
-
-  isAlert = false;
-  alert = {type: '', message: ''};
-
-  constructor(private _auth: UserService, private _router: Router) { }
+  constructor(private _auth: UserService, private _router: Router, private toast: NgToastService) { }
 
   ngOnInit(): void {
   }
@@ -51,9 +45,7 @@ export class LoginComponent implements OnInit {
           }
         },
         error: (err) => {
-          this.isAlert = true
-          this.alert.message = err.error.message,
-          this.alert.type = "danger"
+          this.openError(err.error.message)
         },
         complete: () => console.info('complete')
       })
@@ -64,18 +56,23 @@ export class LoginComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.isAlert = true
-          this.alert.message = "Registration successful. Please Login",
-          this.alert.type = "success"
+          this.openSuccess("Registration successful. Please Login")
       },
       error: (err) => {
-        this.isAlert = true
-        this.alert.message = err.error.message,
-        this.alert.type = "danger"
+        this.openError(err.error.message)
       },
       complete: () => {
         console.info('complete')
       }
     })
+  }
+
+  openSuccess(msg: string){
+    this.toast.success({detail:'Success',summary:msg, position:'tr', duration:5000})
+    // this._router.navigate(['/']);
+  }
+
+  openError(err: string){
+    this.toast.error({detail:'Error',summary:err, position:'tr', duration:5000})
   }
 }
