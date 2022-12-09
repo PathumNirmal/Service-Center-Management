@@ -74,13 +74,13 @@
 
                                     <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                                         <div class="contact-wrap w-100 p-md-5 p-4">
-                                            
+                                            {{isChecked}}
                                             <form action="#">
                                                 <h5 class="mb-4">Description of Work</h5>
-                                                <input type="checkbox" id="func1" name="func1">
+                                                <input type="checkbox" [(ngModel)]="isChecked" id="func1" name="func1">
                                                 <label for="func1">Full Service</label><br>
             
-                                                <input type="checkbox" id="func2" name="func2">
+                                                <input type="checkbox" onchange="getValue(this.value)" value="true" id="func2" name="func2">
                                                 <label for="func2">Under Wash</label><br>
             
                                                 <input type="checkbox" id="func3" name="func3">
@@ -89,11 +89,8 @@
                                                 <input type="checkbox" id="func4" name="func4">
                                                 <label for="func4">Vaccum</label><br>
             
-                                                <input type="checkbox" id="func5" name="func5">
+                                                <input type="checkbox" onchange="getValue(this.value)" value="true" id="func5" name="func5">
                                                 <label for="func5">Interior Cleaning</label><br>
-            
-                                                <!-- <input type="checkbox" id="func6" name="func6">
-                                                <label for="func6">Cut & Polish</label><br> -->
             
                                                 <input type="checkbox" id="func7" name="func7">
                                                 <label for="func7">Engine Oil</label><br>

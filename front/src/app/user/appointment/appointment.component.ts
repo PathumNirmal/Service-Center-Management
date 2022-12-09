@@ -9,6 +9,9 @@ import { NgToastService } from 'ng-angular-popup';
 })
 export class AppointmentComponent implements OnInit {
 
+  isChecked = false;
+  
+
   constructor(private _router: Router, private toast: NgToastService) { }
 
   ngOnInit(): void {
