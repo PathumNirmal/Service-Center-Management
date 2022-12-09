@@ -6,10 +6,10 @@ const bookingSchema = mongoose.Schema({
     time: { type: String, require: true },
     status: { type: String, require: true },
     owner: [
-        {type: Schema.Types.ObjectId, ref: 'Customer'}
+        {type: String}
     ],
     vehicle: [
-        {type: Schema.Types.ObjectId, ref: 'Customer_Vehicle_Detail'}
+        {type: String}
     ]
 });
 

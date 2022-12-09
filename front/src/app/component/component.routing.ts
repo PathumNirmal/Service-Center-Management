@@ -65,7 +65,7 @@ export const ComponentsRoutes: Routes = [
 				component: BookingComponent
 			},
 			{
-				path: 'store',
+				path: 'parts',
 				component: StoreComponent
 			},
 			{

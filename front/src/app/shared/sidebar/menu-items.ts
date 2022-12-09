@@ -50,14 +50,14 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
-    path: '/admin/component/store',
-    title: 'Store',
-    icon: 'bi bi-shop-window',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+  // {
+  //   path: '/admin/component/store',
+  //   title: 'Store',
+  //   icon: 'bi bi-shop-window',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
   // {
   //   path: '/component/dropdown',
   //   title: 'Dropdown',

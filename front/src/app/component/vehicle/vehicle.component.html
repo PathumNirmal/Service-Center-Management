@@ -15,7 +15,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor='let tr of trow; index as i'>
+                        <tr *ngFor="let tr of trow; index as i">
                             <td>
                                 {{ i + 1 }}
                             </td>
@@ -29,7 +29,7 @@
                                 {{tr.type}}
                             </td>
                             <td>
-                                <button type="button" class="btn btn-outline-info">
+                                <button routerLink="/admin/component/parts" type="button" class="btn btn-outline-info">
                                     Parts details
                                 </button>
                             </td>
