@@ -1,6 +1,9 @@
 import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { NgToastService } from 'ng-angular-popup';
+import { UserService } from '../../../services/user.service';
+import { Router } from '@angular/router';
 
 declare var $: any;
 
@@ -15,7 +18,11 @@ export class Navigation1Component implements AfterViewInit {
 
   public showSearch = false;
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal, private _user: UserService, private _router: Router, private toast: NgToastService) {
+  }
+
+  logout() {
+    this._user.logoutUser();
   }
 
   // This is for Notifications
