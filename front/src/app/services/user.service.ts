@@ -37,7 +37,7 @@ export class UserService {
 
   logoutUser() {
     localStorage.removeItem('token');
-    this._router.navigate([ '/products' ]);
+    this._router.navigate([ '/' ]);
   }
 
   getToken(): any {

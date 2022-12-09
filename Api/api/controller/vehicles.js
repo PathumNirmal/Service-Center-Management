@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 exports.vehicles_get_all = (req, res, next) => {
     Vehicle.find()
-        .select('brand model manufacture_year _id')
+        .select('brand model vehicle_type manufacture_year _id')
         .exec()
         .then(docs => {
             const response = {
@@ -12,6 +12,7 @@ exports.vehicles_get_all = (req, res, next) => {
                     return {
                         brand: doc.brand,
                         model: doc.model,
+                        type: doc.vehicle_type,
                         manufacture_year: doc.manufacture_year,
                         _id: doc._id,
                         request: {

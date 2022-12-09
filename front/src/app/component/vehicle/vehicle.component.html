@@ -15,18 +15,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let tr of trow; index as i">
+                        <tr *ngFor="let vehicle of vehicles; index as i">
                             <td>
                                 {{ i + 1 }}
                             </td>
                             <td>
-                                {{tr.brand}}
+                                {{vehicle.brand}}
                             </td>
                             <td>
-                                {{tr.model}}
+                                {{vehicle.model}}
                             </td>
                             <td>
-                                {{tr.type}}
+                                {{vehicle.type}}
                             </td>
                             <td>
                                 <button routerLink="/admin/component/parts" type="button" class="btn btn-outline-info">

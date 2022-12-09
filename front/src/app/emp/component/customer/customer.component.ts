@@ -9,7 +9,6 @@ import { UserService } from '../../../services/user.service';
   styleUrls: ['./customer.component.scss']
 })
 export class CustomerComponent implements OnInit {
-
   customers: any;
   test: any;
 

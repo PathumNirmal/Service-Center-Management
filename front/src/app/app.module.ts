@@ -40,6 +40,7 @@ import { InvoiceListComponent } from './user/invoice-list/invoice-list.component
 import { AppointmentComponent } from './user/appointment/appointment.component';
 import { ItemAddComponent } from './admin/item-add/item-add.component';
 import { WorkingSheetComponent } from './emp/working-sheet/working-sheet.component';
+import { InvoiceComponent } from './user/invoice/invoice.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -71,6 +72,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppointmentComponent,
     ItemAddComponent,
     WorkingSheetComponent,
+    InvoiceComponent,
   ],
   imports: [
     NgToastModule,

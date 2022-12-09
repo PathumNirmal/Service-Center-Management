@@ -43,7 +43,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/emp/component/store',
+    path: '/emp/component/in-service',
     title: 'In Service',
     icon: 'bi bi-gear',
     class: '',
@@ -51,21 +51,21 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/emp/component/customer_vehicles',
+    path: '/emp/component/parts',
     title: "parts details",
     icon: 'bi bi-tools',
     class: '',
     extralink: false,
     submenu: []
   },
-  {
-    path: '/emp/component/employee',
-    title: 'Recommended Parts',
-    icon: 'bi bi-people',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+  // {
+  //   path: '/emp/component/employee',
+  //   title: 'Recommended Parts',
+  //   icon: 'bi bi-people',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
   // {
   //   path: '/component/dropdown',
   //   title: 'Dropdown',

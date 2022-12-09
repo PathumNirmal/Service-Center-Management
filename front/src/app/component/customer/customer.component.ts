@@ -12,9 +12,7 @@ export class CustomerComponent implements OnInit {
   customers: any;
   test: any;
 
-  constructor(private userService: UserService, private _router: Router, private toast: NgToastService) {
-    // this.trow=Employee;
-  }
+  constructor(private userService: UserService, private _router: Router, private toast: NgToastService) { }
 
   ngOnInit(): void { 
     this.userService.getCustomers().subscribe((customers: any) => {
@@ -48,5 +46,4 @@ export class CustomerComponent implements OnInit {
   openError(err: string){
     this.toast.error({detail:'Error',summary:err, position:'tr', duration:5000})
   }
-
 }

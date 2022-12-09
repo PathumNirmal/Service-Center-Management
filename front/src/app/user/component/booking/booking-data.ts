@@ -7,21 +7,9 @@ export interface TableRows {
 
 export const Employee : TableRows[] = [
     {
-        date: "2022/03/21",
+        date: "2022/12/11",
         time: "11.00",
         v_no: "NC CAB 3290",
         status: "Cancel",
     },
-    {
-        date: "2022/03/21",
-        time: "11.00",
-        v_no: "NC CAB 3290",
-        status: "Canceled",
-    },
-    {
-        date: "2022/03/21",
-        time: "11.00",
-        v_no: "NC CAB 3290",
-        status: "Finished",
-    }
 ]

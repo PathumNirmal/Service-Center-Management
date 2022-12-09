@@ -15,6 +15,10 @@ export class VehicleService {
     return this.webReqService.post(`vehicles`, vehicle);
   }
 
+  getVehicles() {
+    return this.webReqService.get(`vehicles`);
+  }
+
   addItem(item: any) {
     return this.webReqService.post(`service_part/add`, item);
   }

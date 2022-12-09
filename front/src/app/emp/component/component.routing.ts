@@ -65,11 +65,11 @@ export const ComponentsRoutes: Routes = [
 				component: BookingComponent
 			},
 			{
-				path: 'store',
+				path: 'in-service',
 				component: StoreComponent
 			},
 			{
-				path: 'customer_vehicles',
+				path: 'parts',
 				component: CustomerVehicleComponent
 			},
 			{
