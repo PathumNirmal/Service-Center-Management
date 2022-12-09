@@ -15,6 +15,8 @@ import { InvoiceListComponent } from './user/invoice-list/invoice-list.component
 import { ItemAddComponent } from './admin/item-add/item-add.component';
 import { AppointmentComponent } from './user/appointment/appointment.component';
 import { WorkingSheetComponent } from './emp/working-sheet/working-sheet.component';
+import { InvoiceComponent } from './user/invoice/invoice.component';
+import { EditItemsComponent } from './admin/edit-items/edit-items.component';
 
 
 export const Approutes: Routes = [
@@ -24,6 +26,8 @@ export const Approutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'about', component: AboutComponent},
   { path: 'service', component: ServiceComponent},
+  { path: 'invoice', component: InvoiceComponent},
+  { path: 'edit-item', component: EditItemsComponent},
   {
     path: 'admin',
     component: FullComponent,
@@ -41,6 +45,7 @@ export const Approutes: Routes = [
         path: 'component',
         loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
       }
+      
     ]
   },
   { path: 'admin/add-emp', component: EmployeeAddComponent},
