@@ -8,9 +8,7 @@ exports.add = (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         type: req.body.type,
         brand: req.body.brand,
-        identify_no: req.body.identify_no,
-        quantity_type: req.body.quantity_type,
-        quantity: req.body.quantity,
+        identification_no: req.body.identification_no,
         unit: req.body.unit,
         unit_price: req.body.price
     });
@@ -23,9 +21,7 @@ exports.add = (req, res, next) => {
                 createRecord: {
                     type: result.type,
                     brand: result.brand,
-                    identify_no: result.identify_no,
-                    quantity_type: result.quantity_type,
-                    quantity: result.quantity,
+                    identification_no: result.identification_no,
                     unit: result.unit,
                     unit_price: result.price,
                     _id: result._id,

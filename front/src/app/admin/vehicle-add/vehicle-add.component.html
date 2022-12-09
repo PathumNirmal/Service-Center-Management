@@ -12,43 +12,43 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="label" for="id">ID</label>
-                                                <input  type="text" class="form-control" name="id" id="id" placeholder="">
+                                                <label class="label" for="subject">Brand</label>
+                                                <input [(ngModel)]="vehicleData.brand" type="text" class="form-control" name="brand" id="brand" placeholder="Add Vehicle Brand">
                                             </div>
                                         </div>
                                         <div class="col-md-12"> 
                                             <div class="form-group">
                                                 <label class="label" for="type">Model</label>
-                                                <input  type="text" class="form-control" name="model" id="model" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="label" for="subject">Brand</label>
-                                                <input  type="text" class="form-control" name="brand" id="brand" placeholder="">
+                                                <input [(ngModel)]="vehicleData.model" type="text" class="form-control" name="model" id="model" placeholder="Add Vehicle Model">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="subject">Manufactured Year</label>
-                                                <input  type="text" class="form-control" name="manufactured_year" id="manufactured_year" placeholder="">
+                                                <input [(ngModel)]="vehicleData.manufacture_year" type="text" class="form-control" name="manufactured_year" id="manufactured_year" placeholder="Add Vehicle's Manufactured Year">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="subject">Vehicle Type</label>
+                                                <input [(ngModel)]="vehicleData.vehicle_type" type="text" class="form-control" name="manufactured_year" id="manufactured_year" placeholder="Vehicle Type">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="#">Fuel Type</label>
-                                                <input  type="text" class="form-control" name="fuel_type" id="fuel_type" placeholder="">
+                                                <input [(ngModel)]="vehicleData.fuel_type" type="text" class="form-control" name="fuel_type" id="fuel_type" placeholder="Fuel Type">
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <!-- <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="subject">Suitable Engine Oil</label>
                                                 <input  type="text" class="form-control" name="suitable_engine_oil" id="suitable_engine_oil" placeholder="">
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div style="margin-top: 20px" class="container">
                                             <div class="col-md-12 text-right">
-                                                <button (click)="addEmployee()" type="button" class="btn btn-success">Save</button>
+                                                <button (click)="addVehicle()" type="button" class="btn btn-success">Save</button>
                                             </div>
                                         </div>
                                     </div>

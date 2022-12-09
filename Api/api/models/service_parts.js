@@ -5,8 +5,6 @@ const servicePartSchema = mongoose.Schema({
     type: { type: String, require: true },
     brand: { type: String, require: true },
     identification_no: { type: String, require: true },
-    quantity_type: { type: String, require: true },
-    quantity: { type: String, require: true },
     unit: { type: String, require: true },
     unit_price: { type: String, require: true }
 });

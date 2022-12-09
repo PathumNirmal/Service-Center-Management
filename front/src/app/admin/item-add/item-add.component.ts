@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
-
-import { UserService } from '../../services/user.service';
+import { VehicleService } from '../../services/vehicle.service';
 
 @Component({
   selector: 'app-item-add',
@@ -11,21 +10,21 @@ import { UserService } from '../../services/user.service';
 })
 export class ItemAddComponent implements OnInit {
 
-  registerUserData = {nic:'', name:'', phone:'', address:'', email:'', password:'emp@123', role:'employee'}
+  itemData = {type:'', brand:'', identification_no:'', unit:'', price:''}
 
-  constructor(private _user: UserService, private _router: Router, private toast: NgToastService) { }
+  constructor(private _vehicleService: VehicleService, private _router: Router, private toast: NgToastService) { }
 
   ngOnInit(): void {
   }
 
-  addEmployee() {
+  addItem() {
     //console.log(this.registerUserData)
-    this._user.addEmployee(this.registerUserData)
+    this._vehicleService.addItem(this.itemData)
       .subscribe(
         {
           next: (v) => {
             console.log(v)
-            this.openSuccess("Employee added")
+            this.openSuccess("Item added")
           },
           error: (e) => {
             console.error(e),

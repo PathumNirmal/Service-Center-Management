@@ -42,7 +42,9 @@ exports.vehicles_create_vehicle = (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         brand: req.body.brand,
         model: req.body.model,
-        manufacture_year: req.body.manufacture_year
+        manufacture_year: req.body.manufacture_year,
+        vehicle_type: req.body.vehicle_type,
+        fuel_type: req.body.fuel_type,
     });
     vehicle
         .save()
@@ -54,6 +56,8 @@ exports.vehicles_create_vehicle = (req, res, next) => {
                     brand: result.brand,
                     model: result.model,
                     manufacture_year: result.manufacture_year,
+                    vehicle_type: result.vehicle_type,
+                    fuel_type: result.fuel_type,
                     _id: result._id,
                     request: {
                         type: 'GET',
