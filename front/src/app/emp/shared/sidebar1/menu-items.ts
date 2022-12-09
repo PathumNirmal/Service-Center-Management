@@ -60,7 +60,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/emp/component/employee',
-    title: 'Matching Parts',
+    title: 'Recommended Parts',
     icon: 'bi bi-people',
     class: '',
     extralink: false,
