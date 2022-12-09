@@ -8,7 +8,7 @@
                             <div class="contact-wrap w-100 p-md-5 p-4">
                                 
                                 <form action="#">
-                                    <h3 class="mb-4">Description of Work</h3>
+                                    <h3 class="mb-4">Service Station Recomandations</h3>
                                     <input type="checkbox" id="func1" name="func1">
                                     <label for="func1">Full Service</label><br>
 
@@ -25,22 +25,46 @@
                                     <label for="func5">Interior Cleaning</label><br>
 
                                     <input type="checkbox" id="func6" name="func6">
-                                    <label for="func6">Cut & Polish</label><br>
+                                    <label for="func6">Power Steering Oil</label><br>
 
                                     <input type="checkbox" id="func7" name="func7">
-                                    <label for="func7">Engine Oil</label><br>
+                                    <label for="func7">Engine Oil</label>                           
+                                    <select name="func7" id="func7">
+                                        <option value="Engine Oil1"></option>
+                                        <option value="Engine Oil2"></option>
+                                        <option value="Engine Oil3"></option>
+                                        <option value="Engine Oil4"></option>
+                                      </select><br>
 
                                     <input type="checkbox" id="func8" name="func8">
-                                    <label for="func8">Brake Oil</label><br>
-
+                                    <label for="func8">Brake Oil</label>
+                                    <select name="func8" id="func8">
+                                        <option value="Brake Oil1"></option>
+                                        <option value="Brake Oil2"></option>
+                                        <option value="Brake Oil3"></option>
+                                        <option value="Brake Oil4"></option>
+                                      </select><br>
+                                    <div class="position">
                                     <input type="checkbox" id="func9" name="func9">
-                                    <label for="func9">Gear Oil</label><br>
+                                    <label for="func9">Gear Oil</label>
+                                    <select name="func9" id="func9">
+                                        <option value="Brake Oil1"></option>
+                                        <option value="Brake Oil2"></option>
+                                        <option value="Brake Oil3"></option>
+                                        <option value="Brake Oil4"></option>
+                                      </select><br>
 
                                     <input type="checkbox" id="func11" name="func11">
-                                    <label for="func11">Oil Filter</label><br>
+                                    <label for="func11">Oil Filter</label>
+                                    <select name="func11" id="func11">
+                                        <option value="Brake Oil1"></option>
+                                        <option value="Brake Oil2"></option>
+                                        <option value="Brake Oil3"></option>
+                                        <option value="Brake Oil4"></option>
+                                      </select><br>
 
                                     <input type="checkbox" id="func12" name="func12">
-                                    <label for="func12">Diesel Filter</label><br>
+                                    <label for="func12">Fuel Filter</label><br>
 
                                     <input type="checkbox" id="func13" name="func13">
                                     <label for="func13">Cabin Filter</label><br>
@@ -55,26 +79,27 @@
                                     <label for="func16">Battery Replace</label><br>
 
                                     <input type="checkbox" id="func17" name="func17">
-                                    <label for="func17">Wheel Balancing</label><br><br>
-
-                                    <h3 class="mb-4">Other Works</h3><br><br>
+                                    <label for="func17">Wheel Balancing</label>
+                                    </div>
+                                    <br><br>
+                                    <h3 class="mb-4">Other Works</h3>
                                     <textarea class="form-control" name="other" id="other" rows="4" cols="50"></textarea>
-
                                     <br>
-                                    <input type="submit" value="Submit">
+
+                                    <div class="center">
+                                        <input type="submit" value="Submit">
+                                     </div>
                                   </form>
 
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
                             <div class="info-wrap bg-primary w-100 p-md-5 p-4">
-                                <h2>Appointment</h2>
-                                <img style="margin-bottom:30px" src="assets/images/users/user4.jpg">
-                                <div class="container">
-                                    <div class="col-md-12 text-center">
-                                        <button type="button" class="btn btn-light">Add a photo</button>
-                                    </div>
+                                <div class="center">
+                                    <h2>Appointment</h2>
+                                    <img style="margin-bottom:30px" src="assets/images/users/user4.jpg">
                                 </div>
+                                
                                 <br><br>
                                 <!-- <form method="POST" id="contactForm" name="contactForm" class="contactForm">
                                     <div class="row">
@@ -84,43 +109,35 @@
                                                 <form action="/action_page.php">
                                                     <label for="company">Company of the Vehicle:</label>
                                                     <input type="text" class="form-control" name="company" id="company">
-                                                    <br><br>
+                                                    <br>
 
                                                     <label for="vmodel">Model:</label>
                                                     <input type="text" class="form-control" name="vmodel" id="vmodel">
-                                                    <br><br>
+                                                    <br>
 
                                                     <label class="label" for="#">Vehicle Number</label>
                                                     <input type="text" class="form-control" name="vnumber" id="vnumber">
-                                                    <br><br>
+                                                    <br>
                                             
 
                                                     <label for="year">Manufactured Year:</label>
                                                     <input type="text" class="form-control" name="year" id="year">
-                                                    <br><br>
+                                                    <br>
 
 
                                                     <label class="label" for="#">Mileage</label>
                                                     <input type="text" class="form-control" name="mileage" id="mileage">
-                                                    <br><br>
+                                                    <br>
                                             
 
                                                     <label for="cars">Preferred Date:</label>
                                                     <input type="text" class="form-control" name="date" id="date">
-                                                    <br><br>
+                                                    <br>
 
                                                     <label for="cars">Choose a Time:</label>
                                                     <input type="text" class="form-control" name="time" id="time">
                                                     <br><br>
 
-                                                    <label for="cars">Choose a car:</label>
-                                                    <select name="cars" id="cars">
-                                                      <option value="volvo"></option>
-                                                      <option value="saab"></option>
-                                                      <option value="opel"></option>
-                                                      <option value="audi"></option>
-                                                    </select>
-                                                    <br><br>
 
                                                     <!-- <input type="submit" value="Submit"> -->
                                                   </form>
