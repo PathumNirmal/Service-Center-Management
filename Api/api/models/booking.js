@@ -20,14 +20,11 @@ const bookingSchema = mongoose.Schema({
     air_filter: { type: Boolean},
     coolant: { type: Boolean},
     battery_replace: { type: Boolean},
+    power_steering: {type: Boolean},
     wheel_balance: { type: Boolean},
     other: { type: String },
-    owner: [
-        {type: String}
-    ],
-    vehicle: [
-        {type: String}
-    ]
+    owner: {type: String},
+    vehicle:{type: String}
 });
 
 module.exports = mongoose.model('Booking', bookingSchema);

@@ -50,14 +50,14 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
-    path: '/emp/component/parts',
-    title: "parts details",
-    icon: 'bi bi-tools',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+  // {
+  //   path: '/emp/component/parts',
+  //   title: "parts details",
+  //   icon: 'bi bi-tools',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
   // {
   //   path: '/emp/component/employee',
   //   title: 'Recommended Parts',

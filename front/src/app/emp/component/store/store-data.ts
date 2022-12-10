@@ -8,16 +8,16 @@ export const Employee : TableRows[] = [
     {
 	    num: "NC BDA 5432",
 	    milage: "21458",
-	    owner: "Thilina",
+	    owner: "Vimukthi Randika",
     },
-    {
-        num: "NC BDA 5432",
-	    milage: "21458",
-	    owner: "Thilina",
-    },
-    {
-        num: "NC BDA 5432",
-	    milage: "21458",
-	    owner: "Thilina",
-    }
+    // {
+    //     num: "NC BDA 5432",
+	//     milage: "21458",
+	//     owner: "Thilina",
+    // },
+    // {
+    //     num: "NC BDA 5432",
+	//     milage: "21458",
+	//     owner: "Thilina",
+    // }
 ]

@@ -24,6 +24,7 @@ exports.add = (req, res, next) => {
         air_filter: req.body.air_filter,
         coolant: req.body.coolant,
         battery_replace: req.body.battery_replace,
+        power_steering: req.body.power_steering,
         wheel_balance: req.body.wheel_balance,
         other: req.body.other,
         owner: req.body.owner,
@@ -54,15 +55,12 @@ exports.add = (req, res, next) => {
                     air_filter: result.air_filter,
                     coolant: result.coolant,
                     battery_replace: result.battery_replace,
+                    power_steering: result.power_steering,
                     wheel_balance: result.wheel_balance,
                     other: result.other,
                     owner: result.owner,
                     vehicle: result.vehicle,
-                    _id: result._id,
-                    request: {
-                        type: 'GET',
-                        url: "http://localhost:3000/customer_vehicle/" + result._id
-                    }
+                    _id: result._id
                 }
             });
         })
@@ -75,8 +73,8 @@ exports.add = (req, res, next) => {
     
 }
 
-exports.get_all = (req, res, next) => {
-    CustomerVehicle.find()
+exports.count = (req, res, next) => {
+    Booking.find()
         .exec()
         .then(docs => {
             const response = {
@@ -138,42 +136,4 @@ exports.get_one = (req, res, next) => {
             console.log(err);
             res.status(500).json({error: err});
         })
-}
-
-exports.update = (req, res, next) => {
-    const id = req.params.cvId;
-    CustomerVehicle.findOneAndUpdate({ _id: id}, {
-        $set: req.body
-    }).then(result => {
-                res.status(200).json({
-                    message: 'Record updated',
-                    request: {
-                        type: 'GET',
-                        url: 'http://localhost:3000/customer_vehicle/' + id
-                    }
-                });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({
-                error: err
-            });
-        });
-}
-
-exports.delete = (req, res, next) => {
-    const id = req.params.cvId;
-    CustomerVehicle.remove({ _id: id})
-        .exec()
-        .then(result => {
-            res.status(200).json({
-                message: 'Record deleted',
-            });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({
-                error: err
-            });
-        });
 }

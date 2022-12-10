@@ -10,19 +10,19 @@ export const topcards: topcard[] = [
     {
         bgcolor: 'info',
         icon: 'bi bi-wallet',
-        title: '20',
+        title: '1',
         subtitle: 'Total booking'
     },
     {
         bgcolor: 'success',
         icon: 'bi bi-coin',
-        title: '15',
+        title: '0',
         subtitle: 'Completed'
     },
     {
         bgcolor: 'warning',
         icon: 'bi bi-basket3',
-        title: '5',
+        title: '1',
         subtitle: 'Pending'
     },
 
