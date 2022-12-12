@@ -10,6 +10,7 @@ const customerRoutes = require('./api/routes/customer');
 const serviceTypeRoutes = require('./api/routes/service_type');
 const servicePartRoutes = require('./api/routes/service_parts');
 const customerVehicleRoutes = require('./api/routes/customer_vehicle');
+const bookingRoutes = require('./api/routes/booking');
 
 mongoose.connect('mongodb://127.0.0.1:27017/ServiceCenter', { useNewUrlParser: true }).then(() => {
     console.log("Connected to MongoDB successfully :)");
@@ -44,6 +45,7 @@ app.use('/customer', customerRoutes);
 app.use('/service_type', serviceTypeRoutes);
 app.use('/service_part', servicePartRoutes);
 app.use('/customer_vehicle', customerVehicleRoutes);
+app.use('/booking', bookingRoutes);
 
 // app.use((req, res, next) => {
 //     res.status(200).json({

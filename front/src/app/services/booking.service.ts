@@ -4,16 +4,20 @@ import { WebRequestService } from './web-request.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BehaviorSubject, tap } from 'rxjs';
-import { UserLoginModel } from '../models/user-login.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerService {
+export class BookingService {
 
-  constructor(private webReqService: WebRequestService, private _router: Router) { }
+  constructor( private webReqService: WebRequestService, private _router: Router ) { }
 
-  addVehicle(data: any) {
-    return this.webReqService.post(`customer_vehicle/add`, data);
+  addBooking(booking: any) {
+    return this.webReqService.post(`booking`, booking);
+  }
+
+  getBookings(){
+    return this.webReqService.get(`booking/count`);
   }
 }
+

@@ -11,7 +11,7 @@
                                     <form action="#">
                                     <div class="form-group">
                                         <label class="label" for="company">Company of the Vehicle:</label>
-                                        <select class="form-control" name="company" id="company" placeholder="Brand">
+                                        <select [(ngModel)]="vehicle.brand" class="form-control" name="company" id="company" placeholder="Brand">
                                             <option value="toyota">Toyota</option>
                                             <option value="honda">Honda</option>
                                             <option value="suzuki">Suzuki</option>
@@ -21,32 +21,31 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="label" for="vmodel">Model:</label>
-                                        <select class="form-control" name="vmodel" id="vmodel">
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
+                                        <select [(ngModel)]="vehicle.model" class="form-control" name="vmodel" id="vmodel" placeholder="Model">
+                                            <option value="wagonr">Montero Sport</option>
+                                            <option value="wagonr">Lancer</option>
+                                            <option value="wagonr">Eclips</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label class="label" class="label" for="#">Vehicle Number</label>
-                                        <input type="text" class="form-control" name="vnumber" id="vnumber" placeholder="WP XXX 0000">
+                                        <input [(ngModel)]="vehicle.vehicle_no" type="text" class="form-control" name="vnumber" id="vnumber" placeholder="WP XXX 0000">
                                     </div>
                                     <div class="form-group">
                                         <label class="label" for="year">Manufactured Year:</label>
-                                        <input type="text" class="form-control" name="vnumber" id="vnumber" placeholder="Manufactured Year">
+                                        <input type="text" [(ngModel)]="vehicle.manufacture_year" class="form-control" name="vnumber" id="vnumber" placeholder="Manufactured Year">
                                     </div>
                                     <div class="form-group">
                                         <label class="label" class="label" for="#">Mileage</label>
-                                        <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage">
+                                        <input type="text" [(ngModel)]="vehicle.milage" class="form-control" name="mileage" id="mileage" placeholder="Mileage">
                                     </div>
                                     <div class="form-group">
                                         <label class="label" for="cars">Preferred Date:</label>
-                                        <input class="form-control" type="date" id="preferredDate" name="preferredDate" placeholder="Preferred Date">
+                                        <input class="form-control" [(ngModel)]="data.date" type="date" id="preferredDate" name="preferredDate" placeholder="Preferred Date">
                                     </div>
                                     <div class="form-group">
                                         <label class="label" for="cars">Preferred Time:</label>
-                                        <select class="form-control" name="cars" id="cars">
+                                        <select [(ngModel)]="data.time" class="form-control" name="cars" id="cars">
                                             <option value="9.00">9.00 a.m.</option>
                                             <option value="9.30">9.30 a.m.</option>
                                             <option value="10.00">10.00 a.m.</option>
@@ -74,58 +73,57 @@
 
                                     <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                                         <div class="contact-wrap w-100 p-md-5 p-4">
-                                            {{isChecked}}
                                             <form action="#">
                                                 <h5 class="mb-4">Description of Work</h5>
-                                                <input type="checkbox" [(ngModel)]="isChecked" id="func1" name="func1">
+                                                <input type="checkbox" [(ngModel)]="data.full_service" id="func1" name="func1">
                                                 <label for="func1">Full Service</label><br>
             
-                                                <input type="checkbox" onchange="getValue(this.value)" value="true" id="func2" name="func2">
+                                                <input type="checkbox" [(ngModel)]="data.under_wash" value="true" id="func2" name="func2">
                                                 <label for="func2">Under Wash</label><br>
             
-                                                <input type="checkbox" id="func3" name="func3">
+                                                <input type="checkbox" [(ngModel)]="data.body_wash" id="func3" name="func3">
                                                 <label for="func3">Body Wash</label><br>
             
-                                                <input type="checkbox" id="func4" name="func4">
+                                                <input type="checkbox" [(ngModel)]="data.vaccum" id="func4" name="func4">
                                                 <label for="func4">Vaccum</label><br>
             
-                                                <input type="checkbox" onchange="getValue(this.value)" value="true" id="func5" name="func5">
+                                                <input type="checkbox" [(ngModel)]="data.interior" value="true" id="func5" name="func5">
                                                 <label for="func5">Interior Cleaning</label><br>
             
-                                                <input type="checkbox" id="func7" name="func7">
+                                                <input type="checkbox" [(ngModel)]="data.engine_oil" id="func7" name="func7">
                                                 <label for="func7">Engine Oil</label><br>
             
-                                                <input type="checkbox" id="func8" name="func8">
+                                                <input type="checkbox" [(ngModel)]="data.brake_oil" id="func8" name="func8">
                                                 <label for="func8">Brake Oil</label><br>
             
-                                                <input type="checkbox" id="func9" name="func9">
+                                                <input type="checkbox" [(ngModel)]="data.gear_oil" id="func9" name="func9">
                                                 <label for="func9">Gear Oil</label><br>
             
-                                                <input type="checkbox" id="func11" name="func11">
+                                                <input type="checkbox" [(ngModel)]="data.oil_filter" id="func11" name="func11">
                                                 <label for="func11">Oil Filter</label><br>
             
-                                                <input type="checkbox" id="func12" name="func12">
+                                                <input type="checkbox" [(ngModel)]="data.fuel_filter" id="func12" name="func12">
                                                 <label for="func12">Fuel Filter</label><br>
             
-                                                <input type="checkbox" id="func13" name="func13">
+                                                <input type="checkbox" [(ngModel)]="data.cabin_filter" id="func13" name="func13">
                                                 <label for="func13">Cabin Filter</label><br>
             
-                                                <input type="checkbox" id="func14" name="func14">
+                                                <input type="checkbox" [(ngModel)]="data.air_filter" id="func14" name="func14">
                                                 <label for="func14">Air Filter</label><br>
             
-                                                <input type="checkbox" id="func15" name="func15">
+                                                <input type="checkbox" [(ngModel)]="data.coolant" id="func15" name="func15">
                                                 <label for="func15">Radiator Coolant</label><br>
             
-                                                <input type="checkbox" id="func16" name="func16">
+                                                <input type="checkbox" [(ngModel)]="data.battery_replace" id="func16" name="func16">
                                                 <label for="func16">Battery Replace</label><br>
 
-                                                <input type="checkbox" id="func17" name="func18">
+                                                <input type="checkbox" [(ngModel)]="data.power_steering" id="func17" name="func18">
                                                 <label for="func17">Power Steering Oil</label><br>
             
-                                                <input type="checkbox" id="func18" name="func18">
+                                                <input type="checkbox" [(ngModel)]="data.wheel_balance" id="func18" name="func18">
                                                 <label for="func18">Wheel Balancing</label><br><br>
             
-                                                <h5 class="mb-4">Other Works</h5><br>
+                                                <h5 class="mb-4" [(ngModel)]="data.other">Other Works</h5><br>
                                                 <textarea class="form-control" name="other" id="other" rows="4" cols="200"></textarea>
             
                                                 <br>

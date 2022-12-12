@@ -14,7 +14,7 @@ export const Employee : TableRows[] = [
 	    model: "Days",
 	    milage: "30200",
 	    manyear: "2017",
-	    owner: "Achala Anupama",
+	    owner: "Supun Mihiranga",
     },
     {
         reg_no: "NP CAB 4009",
@@ -22,7 +22,7 @@ export const Employee : TableRows[] = [
 	    model: "Wagon-R",
 	    milage: "15700",
 	    manyear: "2019",
-	    owner: "Milan Pramod",
+	    owner: "Dilan Sathsara",
     },
     {
         reg_no: "NC CBA 9249",
@@ -30,6 +30,6 @@ export const Employee : TableRows[] = [
 	    model: "CH-R",
 	    milage: "9500",
 	    manyear: "2018",
-	    owner: "Vimukthi Silva",
+	    owner: "Vimukthi Randika",
     }
 ]

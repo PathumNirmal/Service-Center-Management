@@ -1,4 +1,8 @@
-<section class="ftco-section">
+<select name="select vehicle" id="">
+    <option  value="">WP CAB 2301</option>
+    <option value="">NC CBA 9249</option>
+</select>
+<section *ngIf="hideThis" class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -26,9 +30,9 @@
 
                                     <input type="checkbox" id="func6" name="func6">
                                     <label for="func6">Power Steering Oil &nbsp;:</label>
-                                    <select name="func6" id="func6">
+                                    <!-- <select name="func6" id="func6">
                                         <option value="Fuel Filter1">Mitsubishi diamond SP II</option>
-                                      </select>
+                                      </select> -->
                                     <br>
 
 
@@ -53,9 +57,9 @@
                                     <!-- <div class="position"> -->
                                     <input type="checkbox" id="func9" name="func9">
                                     <label for="func9">Gear Oil  &nbsp;:</label>
-                                    <select name="func9" id="func9">
+                                    <!-- <select name="func9" id="func9">
                                         <option value="Brake Oil1">Fuchs Titan 75W-90</option>
-                                      </select><br>
+                                      </select><br> --><br>
 
                                     <input type="checkbox" id="func11" name="func11">
                                     <label for="func11">Oil Filter  &nbsp;:</label>
@@ -68,21 +72,21 @@
 
                                     <input type="checkbox" id="func12" name="func12">
                                     <label for="func12">Fuel Filter  &nbsp;:</label>
-                                    <select name="func12" id="func12">
+                                    <!-- <select name="func12" id="func12">
                                         <option value="Fuel Filter1">JS FE-0053</option>
-                                      </select><br>
+                                      </select><br> --><br>
 
                                     <input type="checkbox" id="func13" name="func13">
                                     <label for="func13">Cabin Filter  &nbsp;:</label>
-                                    <select name="func13" id="func13">
+                                    <!-- <select name="func13" id="func13">
                                         <option value="Cabin Filter1">MITSUBISHI 7803A084</option>
-                                      </select><br>
+                                      </select><br> --><br>
 
                                     <input type="checkbox" id="func14" name="func14">
                                     <label for="func14">Air Filter  &nbsp;:</label>
-                                    <select name="func14" id="func14">
+                                    <!-- <select name="func14" id="func14">
                                         <option value="Air Filter1">MITSUBISHI 1500A098 – A1517G</option>
-                                      </select><br>
+                                      </select><br> --><br>
 
                                     <input type="checkbox" id="func15" name="func15">
                                     <label for="func15">Radiator Coolant  &nbsp;:</label>
@@ -102,7 +106,7 @@
                                     <br>
 
                                     <div class="center">
-                                        <input type="submit" value="Submit">
+                                        <input (click)="hideThis()" type="submit" value="Submit">
                                      </div>
                                   </form>
 
@@ -123,34 +127,34 @@
 
                                                 <form action="/action_page.php">
                                                     <label for="company">Company of the Vehicle:</label>
-                                                    <input type="text" class="form-control" name="company" id="company">
+                                                    <input type="text" class="form-control" name="company" id="company" placeholder="Mitsubishi">
                                                     <br>
 
                                                     <label for="vmodel">Model:</label>
-                                                    <input type="text" class="form-control" name="vmodel" id="vmodel">
+                                                    <input type="text" class="form-control" name="vmodel" id="vmodel" placeholder="Montero Sport">
                                                     <br>
 
                                                     <label class="label" for="#">Vehicle Number</label>
-                                                    <input type="text" class="form-control" name="vnumber" id="vnumber">
+                                                    <input type="text" class="form-control" name="vnumber" id="vnumber" placeholder="WP CAB 2301">
                                                     <br>
                                             
 
                                                     <label for="year">Manufactured Year:</label>
-                                                    <input type="text" class="form-control" name="year" id="year">
+                                                    <input type="text" class="form-control" name="year" id="year" placeholder="2017">
                                                     <br>
 
 
                                                     <label class="label" for="#">Mileage</label>
-                                                    <input type="text" class="form-control" name="mileage" id="mileage">
+                                                    <input type="text" class="form-control" name="mileage" id="mileage" placeholder="15500">
                                                     <br>
                                             
 
                                                     <label for="cars">Preferred Date:</label>
-                                                    <input type="text" class="form-control" name="date" id="date">
+                                                    <input type="text" class="form-control" name="date" id="date" placeholder="2022/12/10">
                                                     <br>
 
                                                     <label for="cars">Choose a Time:</label>
-                                                    <input type="text" class="form-control" name="time" id="time">
+                                                    <input type="text" class="form-control" name="time" id="time" placeholder="2.00 p.m.">
                                                     <br><br>
 
 

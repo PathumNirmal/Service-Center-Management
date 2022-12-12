@@ -8,24 +8,24 @@ export interface TableRows {
 
 export const Employee : TableRows[] = [
     {
-        date: "2022/03/20",
+        date: "2022/12/09",
         time: "11.00 a.m.",
         v_no: "NC CAA 4539",
         status: "Finished",
-        customer: "Achala Anupama",
+        customer: "Supun Mihiranga",
     },
     {
-        date: "2022/03/20",
-        time: "12.10 p.m.",
-        v_no: "NP CAB 4009",
-        status: "Finished",
-        customer: "Milan Pramod",
-    },
-    {
-        date: "2022/03/21",
-        time: "09.00 a.m.",
+        date: "2022/12/10",
+        time: "10.00 a.m.",
         v_no: "NC CBA 9249",
-        status: "Not Arrived",
-        customer: "Vimukthi Silva",
+        status: "Pending",
+        customer: "Vimukthi Randika",
+    },
+    {
+        date: "2022/12/10",
+        time: "2.00 p.m.",
+        v_no: "WP CAB 2301",
+        status: "Pending",
+        customer: "Lakshitha Viraj",
     }
 ]
