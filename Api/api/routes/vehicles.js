@@ -34,7 +34,7 @@ router.get('/', VehiclesController.vehicles_get_all);
 
 router.post('/', VehiclesController.vehicles_create_vehicle);
 
-// router.post('/', checkAuth, upload.single('productImage'), ProductsController.products_create_product);
+// router.post('/', checkAuth, upload.single('vehicleImage'), VehicleController.vehicle_create_vehicle);
 
 router.get('/:vehicleId', VehiclesController.vehicles_get_vehicle);
 

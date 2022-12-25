@@ -26,14 +26,6 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  // {
-  //   path: '/component/customer_vehicles',
-  //   title: "Customer's Vehicle Details",
-  //   icon: 'bi bi-car-front',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
   {
     path: '/emp/component/booking',
     title: 'Booking',
@@ -50,60 +42,4 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  // {
-  //   path: '/emp/component/parts',
-  //   title: "parts details",
-  //   icon: 'bi bi-tools',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
-  // {
-  //   path: '/emp/component/employee',
-  //   title: 'Recommended Parts',
-  //   icon: 'bi bi-people',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
-  // {
-  //   path: '/component/dropdown',
-  //   title: 'Dropdown',
-  //   icon: 'bi bi-menu-app',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
-  // {
-  //   path: '/component/pagination',
-  //   title: 'Pagination',
-  //   icon: 'bi bi-dice-1',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
-  // {
-  //   path: '/component/badges',
-  //   title: 'Nav',
-  //   icon: 'bi bi-pause-btn',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
-  // {
-  //   path: '/component/card',
-  //   title: 'Table',
-  //   icon: 'bi bi-layout-split',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
-  // {
-  //   path: '/about',
-  //   title: 'About',
-  //   icon: 'bi bi-people',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // }
 ];
